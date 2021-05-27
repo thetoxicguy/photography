@@ -1,130 +1,91 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="es">
 
-<!-- Wrapper -->
-<div id="wrapper">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- Header -->
-    <header id="header">
-        <h1><a href="index.html"><strong>{{ site.header.title }}</strong> {{ site.header.subtitle }}</a></h1>
-        <nav>
-            <ul>
-                <li><a href="#footer" class="icon fa-info-circle">About</a></li>
-            </ul>
-        </nav>
-    </header>
+  <title>Andrés de Haro - Fotógrafo</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    <!-- Main -->
-    <div id="main">
-        {% for image in site.static_files %}
-        {% if image.path contains 'fulls' %}
-        <article class="thumb">
-            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" class="image">
-                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}" alt=""
-                     data-name="{{ image.name }}"/></a>
-            <!--<h2></h2>
-            <p></p>-->
-        </article>
-        {% endif %}
-        {% endfor %}
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+  <!-- Vendor CSS Files -->
+  <link href="/src/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/src/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/src/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/src/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/src/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/src/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+  <!-- Template Main CSS File -->
+  <link href="/src/css/style.css" rel="stylesheet">
+  <link href="/src/css/gallery.css" rel="stylesheet">
+</head>
+
+<!-- Favicons -->
+<link href="/img/favicon.png" rel="icon">
+<link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button>
+  <!-- <i class="bi bi-list mobile-nav-toggle d-xl-none"></i> -->
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav id="navbar" class="navbar nav-menu">
+      <ul>
+        <li><a href="/" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Inicio</span></a></li>
+        <li><a href="/gallery" class="nav-link scrollto"><i class="bx bx-images"></i> <span>Galería</span></a></li>
+        <li><a href="/onsale" class="nav-link scrollto"><i class="bx bx-cart"></i> <span>On Sale</span></a></li>
+        <li><a href="/bio" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Bio</span></a></li>
+        <li><a href="/contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contacto</span></a></li>
+        <!-- <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contacto</span></a></li> -->
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Home Section ======= -->
+  <section id="home" class="d-flex flex-column justify-content-center">
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Andrés de Haro</h1>
+      <p>
+        <span> Photographer</span>
+      </p>
+      <div class="social-links">
+        <!-- <a href="https://www.linkedin.com/in/daniel-robles-l%C3%B3pez-6a8a581b" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a> -->
+        <!-- <a href="https://twitter.com/thetoxicguy" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a> -->
+        <a href="https://www.youtube.com/channel/UCqkyZOm1AcAIQIRMAyLQjqw" class="youtube" target="_blank"><i class="bx bxl-youtube"></i></a>
+        <a href="https://www.facebook.com/AndresDeHaroFoto" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/andres.de.haro/" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+        <!-- <a href="https://github.com/thetoxicguy" class="github" target="_blank"><i class="bx bxl-github"></i></a> -->
+        <!-- <a href="https://join.skype.com/invite/utoo4lQ3jWPP" class="google-plus" target="_blank"><i class="bx bxl-skype"></i></a> -->
+      </div>
     </div>
+  </section><!-- End Home -->
 
-    <!-- Footer -->
-    <footer id="footer" class="panel">
-        <div class="inner split">
-            <div>
-                <section>
-                    <h2>{{ site.footer.name }}</h2>
-                    <p>{{ site.footer.bio }}</p>
-                    <p>{{ site.footer.github }}</p>
-                </section>
-                <section>
-                    <h2>Sponsor</h2>
-                    <div class="ad">
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <ins class="adsbygoogle"
-                             style="display:block; text-align:center;"
-                             data-ad-layout="in-article"
-                             data-ad-format="fluid"
-                             data-ad-client="ca-pub-1702577941194110"
-                             data-ad-slot="9823584598"></ins>
-                        <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-                    </div>
-                </section>
-                <section>
-                    <h2>Follow me on ...</h2>
-                    <ul class="icons">
-                        {% if site.social_urls.facebook %}
-                            <li>
-                                <a href="{{ site.social_urls.facebook }}" class="icon fa-facebook">
-                                    <span class="label">Facebook</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.twitter %}
-                            <li>
-                                <a href="{{ site.social_urls.twitter }}" class="icon fa-twitter">
-                                    <span class="label">Twitter</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.instagram %}
-                            <li>
-                                <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram">
-                                    <span class="label">Instagram</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.dribbble %}
-                            <li>
-                                <a href="{{ site.social_urls.dribbble }}" class="icon fa-dribbble">
-                                    <span class="label">Dribbble</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.github %}
-                            <li>
-                                <a href="{{ site.social_urls.github }}" class="icon fa-github">
-                                    <span class="label">GitHub</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.linkedin %}
-                            <li>
-                                <a href="{{ site.social_urls.linkedin }}" class="icon fa-linkedin">
-                                    <span class="label">LinkedIn</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                    </ul>
-                </section>
-                <p class="copyright">
-                    &copy; {{ site.author }}. Design: {{ site.web_design }}
-                </p>
-            </div>
-            <div>
-                <section>
-                    <h2>Get in touch</h2>
-                    <form method="post" action="#">
-                        <div class="field half first">
-                            <input type="text" name="name" id="name" placeholder="Name"/>
-                        </div>
-                        <div class="field half">
-                            <input type="text" name="email" id="email" placeholder="Email"/>
-                        </div>
-                        <div class="field">
-                            <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
-                        </div>
-                        <ul class="actions">
-                            <li><input type="submit" value="Send" class="special"/></li>
-                            <li><input type="reset" value="Reset"/></li>
-                        </ul>
-                    </form>
-                </section>
-            </div>
-        </div>
-    </footer>
-</div>
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="src/vendor/aos/aos.js"></script>
+  <script src="src/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="src/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="src/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="src/vendor/php-email-form/validate.js"></script>
+  <script src="src/vendor/purecounter/purecounter.js"></script>
+  <script src="src/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="src/vendor/typed.js/typed.min.js"></script>
+  <script src="src/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="src/js/main.js"></script>
+
+</body>
+
+</html>
